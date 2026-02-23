@@ -1,0 +1,572 @@
+<!-- besplatnaya-trenirovka-fс-rus-deti_bel_phon_teleg -->
+<!-- DOCTYPE html -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на бесплатную тренировку — ФК Русь Москва</title>
+    <style>
+        /* Стили, соответствующие духу сайта */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #ffffff;  /* Белый фон страницы */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(225, 27, 27, 0.2), 0 8px 20px rgba(0, 0, 0, 0.1);  /* Тень */
+            overflow: hidden;
+            border: 2px solid #e11b1b;  /* Красная рамка */
+        }
+
+        .header {
+            background: white;
+            color: #e11b1b;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 3px solid #e11b1b;
+        }
+
+        /* Место для логотипа */
+        .logo-placeholder {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
+            background: #f8f9fa;
+            border: 3px dashed #e11b1b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e11b1b;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #e11b1b;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .content {
+            padding: 40px;
+            background: white;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #e11b1b;
+            font-size: 1rem;
+        }
+
+        .form-group label i {
+            color: #FFD700;
+            width: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #FFD700;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #e11b1b;
+            box-shadow: 0 0 0 4px rgba(225, 27, 27, 0.15);
+            background-color: #ffffff;
+        }
+
+        .form-control.error {
+            border-color: #e11b1b;
+            background-color: #fff5f5;
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e11b1b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 15px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f8f9fa;
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: 2px solid #FFD700;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .radio-option:hover {
+            border-color: #e11b1b;
+            background: #fff5f5;
+        }
+
+        .radio-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #e11b1b;
+            margin: 0;
+        }
+
+        .radio-option span {
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* Стили для блока согласия */
+        .consent-block {
+            margin: 25px 0 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 1px solid #FFD700;
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .checkbox-wrapper input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: #e11b1b;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .checkbox-text {
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .privacy-link {
+            color: #e11b1b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .privacy-link:hover {
+            color: #FFD700;
+            text-decoration: underline;
+        }
+
+        /* Стили для сообщения об ошибке согласия */
+        .consent-error {
+            color: #e11b1b;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            padding-left: 32px;
+            display: none;
+        }
+
+        .consent-error.show {
+            display: block;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 18px;
+            background: #FFD700;  /* Жёлтая кнопка */
+            color: #e11b1b;  /* Красный текст */
+            border: 2px solid #e11b1b;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            background: #e11b1b;  /* Красный при наведении */
+            color: white;
+            border-color: #FFD700;
+            box-shadow: 0 15px 35px rgba(225, 27, 27, 0.4);
+        }
+
+        .btn-submit:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-submit i {
+            font-size: 1.2rem;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 2px solid #e11b1b;  /* Красная рамка */
+            box-shadow: 0 5px 15px rgba(225, 27, 27, 0.1);
+        }
+
+        .contact-info h3 {
+            color: #e11b1b;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .contact-info h3 i {
+            color: #FFD700;
+        }
+
+        .contact-phones {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .phone-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border: 2px solid #FFD700;
+        }
+
+        .phone-item:hover {
+            transform: translateX(5px);
+            border-color: #e11b1b;
+        }
+
+        .phone-item i {
+            font-size: 1.5rem;
+            color: #e11b1b;
+            width: 30px;
+        }
+
+        .phone-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .phone-item a:hover {
+            color: #e11b1b;
+        }
+
+        .contact-note {
+            text-align: center;
+            color: #e11b1b;
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        .contact-note i {
+            color: #FFD700;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer-note a {
+            color: #e11b1b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-note a:hover {
+            color: #FFD700;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .radio-option {
+                width: 100%;
+            }
+            
+            .checkbox-wrapper {
+                align-items: flex-start;
+            }
+        }
+    </style>
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- МЕСТО ДЛЯ ЛОГОТИПА -->
+            <div class="logo-placeholder" id="logoContainer">
+                <!-- Сюда можно вставить изображение логотипа -->
+                <!-- Например: <img src="logo.png" alt="ФК Русь"> -->
+                <span>+ вставьте логотип</span>
+            </div>
+            <h1>Детский футбольный клуб Русь</h1>
+            <p>Запишитесь на бесплатную пробную тренировку</p>
+        </div>
+        
+        <div class="content">
+            <form id="trainingForm">
+                <div class="form-group">
+                    <label for="parentName">
+                        <i class="fas fa-user"></i> Ваше имя (родителя)
+                    </label>
+                    <input type="text" class="form-control" id="parentName" name="parentName" placeholder="Имя" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="childName">
+                        <i class="fas fa-child"></i> Имя ребенка
+                    </label>
+                    <input type="text" class="form-control" id="childName" name="childName" placeholder="Имя ребенка" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="childAge">
+                        <i class="fas fa-calendar-alt"></i> Возраст ребенка
+                    </label>
+                    <select class="form-control" id="childAge" name="childAge" required>
+                        <option value="">Выберите возраст</option>
+                        <option value="5">5 лет</option>
+                        <option value="6">6 лет</option>
+                        <option value="7">7 лет</option>
+                        <option value="8">8 лет</option>
+                        <option value="9">9 лет</option>
+                        <option value="10">10 лет</option>
+                        <option value="11">11 лет</option>
+                        <option value="12">12 лет</option>
+                        <option value="13">13 лет</option>
+                        <option value="14">14 лет</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-futbol"></i> Предпочтительная группа
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="group" value="5-7" required>
+                            <span>5-7 лет (Вторник/Пятница 19:00-21:00)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="group" value="8-10">
+                            <span>8-10 лет (Вторник/Четверг/Суббота 20:00-21:00)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="group" value="12-14">
+                            <span>12-14 лет (Понедельник/Среда/Пятница 20:00-21:00)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">
+                        <i class="fas fa-phone-alt"></i> Контактный телефон
+                    </label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> Email (для подтверждения)
+                    </label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="example@mail.ru" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comment">
+                        <i class="fas fa-comment"></i> Комментарий (необязательно)
+                    </label>
+                    <textarea class="form-control" id="comment" name="comment" rows="3" placeholder="Напишите, если есть особые пожелания (например-перезвоните мне)"></textarea>
+                </div>
+                
+                <!-- БЛОК СОГЛАСИЯ -->
+                <div class="consent-block">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" id="consentCheckbox" required>
+                        <span class="checkbox-text">
+                            Используя сайт, вы соглашаетесь на обработку cookies и данных согласно 
+                            <a href="https://orgs.biz/privacy" target="_blank" class="privacy-link">политике конфиденциальности</a>
+                        </span>
+                    </label>
+                    <div id="consentError" class="consent-error">
+                        Необходимо подтвердить согласие
+                    </div>
+                </div>
+                
+                <!-- КНОПКА ОТКРЫВАЕТ TELEGRAM ТОЛЬКО ПРИ СОГЛАСИИ -->
+                <a href="javascript:void(0);" onclick="checkConsentAndRedirect(this)" class="btn-submit" id="submitBtn">
+                    <i class="fab fa-telegram-plane"></i> Записаться на бесплатную пробную тренировку
+                </a>
+            </form>
+            
+            <div class="contact-info">
+                <h3><i class="fas fa-headset"></i> Или позвоните нам</h3>
+                <div class="contact-phones">
+                    <div class="phone-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+79777240357">8-977-724-03-57 (Алексей)</a>
+                    </div>
+                    <div class="phone-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+79035997822">8-903-599-78-22 (Андрей)</a>
+                    </div>
+                </div>
+                <p class="contact-note">
+                    <i class="fas fa-map-marker-alt"></i> Метро Домодедовская/Зябликово, ул. Елецкая, 17/3 (ФОК "Русь")
+                </p>
+            </div>
+            
+            <div class="footer-note">
+                <a href="https://fc-rus-moscow.orgs.biz">← Вернуться на главную</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Маска для телефона
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.startsWith('7') || value.startsWith('8')) {
+                value = value.substring(1);
+            }
+            
+            let formatted = '+7 (';
+            if (value.length > 0) formatted += value.substring(0, 3);
+            if (value.length > 3) formatted += ') ' + value.substring(3, 6);
+            if (value.length > 6) formatted += '-' + value.substring(6, 8);
+            if (value.length > 8) formatted += '-' + value.substring(8, 10);
+            
+            e.target.value = formatted;
+        });
+
+        // Функция проверки согласия и перехода в Telegram
+        function checkConsentAndRedirect(button) {
+            const consentCheckbox = document.getElementById('consentCheckbox');
+            const consentError = document.getElementById('consentError');
+            
+            if (!consentCheckbox.checked) {
+                // Показываем ошибку
+                consentError.classList.add('show');
+                
+                // Подсвечиваем блок
+                consentCheckbox.focus();
+                
+                // Прокручиваем к ошибке
+                consentError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                return false;
+            }
+            
+            // Если согласие есть - переходим в Telegram
+            window.open('https://t.me/fc_rus_moscow', '_blank');
+            return true;
+        }
+
+        // Скрываем ошибку, когда пользователь ставит галочку
+        document.getElementById('consentCheckbox').addEventListener('change', function() {
+            const consentError = document.getElementById('consentError');
+            if (this.checked) {
+                consentError.classList.remove('show');
+            }
+        });
+
+        // Проверка при отправке формы (на случай, если кто-то нажмет Enter)
+        document.getElementById('trainingForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Отменяем стандартную отправку
+            checkConsentAndRedirect();
+        });
+    </script>
+</body>
+</html>
